@@ -1,5 +1,4 @@
 # Giving-Tree
-## Giving Tree Coding Question
 
 ### Input Format:
         (A,B) (B,C) (C,D) (A,C) (C,E) (E,F) ...
