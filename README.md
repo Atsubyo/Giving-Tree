@@ -1,10 +1,10 @@
 # Giving-Tree
-Giving Tree Coding Question
+## Giving Tree Coding Question
 
-Input Format:
+#### Input Format:
         (A,B) (B,C) (C,D) (A,C) (C,E) (E,F) ...
 
-Errors:
+#### Errors:
         E1 - Invalid Input Format
               - One Line
               - Leading/Trailing Whitespace Not Allowed
@@ -18,6 +18,6 @@ Errors:
         E4 - Multiple Roots
         E5 - Input Contains Cycle
 
-If No Errors:
+#### If No Errors:
     Output = Lexicographically Smallest S-Expression
         S-Exp(node) = ( node->value ( S-Exp( node->smallest_child ) )( S-Exp( node->biggest_child ) ) )
