@@ -5,13 +5,13 @@
 
 ### Errors:
 * E1 - Invalid Input Format
-      - One Line
-      - Leading/Trailing Whitespace Not Allowed
-      - Each Pair Is Formatted Strictly with '(', Parent, Comma, Child, ')'
-        - Example: (A,B)
-      - All Values are Uppercase
-      - Parent-Child Pairs Are Separated By Single Spaces
-      - Sequence Of Pairs Have No Particular Order
+  - One Line
+  - Leading/Trailing Whitespace Not Allowed
+  - Each Pair Is Formatted Strictly with '(', Parent, Comma, Child, ')'
+    - Example: (A,B)
+  - All Values are Uppercase
+  - Parent-Child Pairs Are Separated By Single Spaces
+  - Sequence Of Pairs Have No Particular Order
  * E2 - Duplicate Pair
  * E3 - Parent Has More Than Two Children
  * E4 - Multiple Roots
