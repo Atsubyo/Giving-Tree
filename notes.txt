@@ -1,0 +1,87 @@
+// Sample Input #00: (A,B) (B,D) (D,E) (A,C) (C,F) (E,G)
+/*
+            A
+         B    C
+       D    F
+     E
+      G
+*/
+
+// Things to consider:
+/*
+    - Checks for each error will be done sequentially in the given priority order
+    - Not everything will have 'A' as the root/smallest value
+    - Solving this problem should not require creating a tree
+    - Create map with pair<parent, children> to handle E3
+    - Create map with pair<child, # parents> to handle E4 and E5
+*/
+
+// Variables:
+/*
+    - (string) string to hold the user's input (userInputStr)
+    - (stringstream) stringstream to iterate through each pair of the user's input (userInputSS)
+    - (string) string that will hold a pair from user input to be evaluated (userPairStr)
+    - (map<char, set<char>>) map of pair<parent, children> pairs (parentChildMap)
+    - (map<char, int>) map of pair<child, # parents> pairs (childParentMap)
+    - (int) counter for number of roots (numRoots)
+    - (bool) if E3 error occurs (E3)
+    - (bool) if E4 error occurs (E4)
+    - (bool) if E5 error occurs (E5)
+*/
+
+// Program Procedure:
+// 1. Get the user's input.
+/*
+    - getline(cin, userInputStr)
+*/
+
+// 2. Check for invalid input type - (E1)
+/*
+    - pairs are not separated by single space
+        - E1 = true
+    - Leading/trailing whitespace
+        - if front() not '(' and back() not ')'
+            - E1 = true
+    - for each pair (to be set to a stringstream)
+        - One line (will be assumed only given a chance to input once)
+            - if a '\n' is found in the input
+                - E1 = true
+        - Pair formatting
+            - if [0] not '(' and [4] not ')'
+                - E1 = true
+            - if not "parent,child" format
+                - E1 = true
+            - if values are not single uppercase
+                - E1 = true
+*/
+                
+// 3. Transfer the correctly formatted pairs into two maps and simultaneously check for E2, E3, E5.
+/*
+    - if pair already exists in map
+        - cout "E2" error
+        - return
+    - if a set ever increases to size 3
+        - E3 = true
+    - if value for keys in childParentMap greater than 2
+        - E5 = true
+*/
+
+// 5. Check for E4 errors with childParentMap
+/*
+    - for keys in childParentMap
+        - if value equals 0
+            - numRoots + 1
+    - if numRoots greater than 1
+        - E4 = true
+*/
+
+// 6. Check for errors with priority
+/*
+    - if any are true
+        - cout accordingly
+        - return
+    - else
+        - go step 7
+*/
+
+// 7. Convert data into lexicographically smallest S-expression.
