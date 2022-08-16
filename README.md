@@ -18,5 +18,5 @@
  * E5 - Input Contains Cycle
 
 ### If No Errors:
-    Output = Lexicographically Smallest S-Expression
-        S-Exp(node) = ( node->value ( S-Exp( node->smallest_child ) )( S-Exp( node->biggest_child ) ) )
+* Output = Lexicographically Smallest S-Expression
+  - S-Exp(node) = ( node->value ( S-Exp( node->smallest_child ) )( S-Exp( node->biggest_child ) ) )
